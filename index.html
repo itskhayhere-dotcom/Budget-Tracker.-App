@@ -192,6 +192,28 @@ button:active:not(:disabled){transform:translateY(1px)}
 .amt{font-family:var(--serif);font-size:16px;font-weight:600}
 .tabs button{letter-spacing:.14em;font-weight:400}.tabs button.on{font-weight:500}
 .qt2 span{font-size:18px}
+/* Moss / Line visual polish */
+@keyframes mlUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes mlGlow{0%,100%{box-shadow:var(--up),0 0 0 0 rgba(201,164,92,0)}50%{box-shadow:var(--up),0 0 0 6px rgba(201,164,92,.14)}}
+.grid>.card{animation:mlUp .65s cubic-bezier(.2,.7,.2,1) both;background:linear-gradient(165deg,#f4f8f1 0%,#e8eee4 100%);border:1px solid rgba(255,255,255,.75)}
+.grid>.card:nth-child(2){animation-delay:.07s}.grid>.card:nth-child(3){animation-delay:.14s}.grid>.card:nth-child(4){animation-delay:.21s}.grid>.card:nth-child(5){animation-delay:.28s}.grid>.card:nth-child(n+6){animation-delay:.35s}
+h1{background:linear-gradient(90deg,#1f3a2b,#5d8264 55%,#c9a45c);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.big.hero{background:linear-gradient(135deg,#1f3a2b,#4f7c5e);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.card h2{position:relative;padding-left:16px}
+.card h2::before{content:"";position:absolute;left:0;top:50%;width:9px;height:9px;margin-top:-5px;border-radius:0 100% 0 100%;background:linear-gradient(135deg,#8fb097,#5d8264)}
+.ph h2{padding-left:0}.ph h2::before{display:none}
+.pbtn,.add button{background:linear-gradient(145deg,#86b08d,#4a6f53);box-shadow:5px 6px 14px rgba(70,105,80,.35),-3px -3px 9px rgba(255,255,255,.7);transition:transform .15s,filter .2s}
+.pbtn:hover,.add button:hover{filter:brightness(1.07)}
+button:active{transform:scale(.97)}
+.xl,.chips button,.chips a{transition:transform .15s,box-shadow .2s}
+.chips button:hover,.xl:hover{transform:translateY(-1px)}
+.ring{background:radial-gradient(circle at 30% 25%,#f6faf3,#e2e9dd);box-shadow:var(--up),0 14px 34px -10px rgba(93,130,100,.45)}
+.qa button .ic,.qa button i{transition:transform .2s}
+.qa button:hover .ic{transform:translateY(-2px)}
+.tabs{background:linear-gradient(160deg,rgba(244,248,241,.92),rgba(226,232,221,.92));backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.7)}
+.tabs button.on::after{background:#c9a45c;width:16px}
+.bar>*{background:linear-gradient(90deg,#7fa385,#4f7c5e)}
+@media (prefers-reduced-motion:reduce){.grid>.card{animation:none}}
 </style>
 </head>
 <body>
